@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg shadow shadow-sm p-3 navbar-admin">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold text-light" href="#">
+        <a class="navbar-brand fw-bold text-light " href="#">
             <i class="fas fa-cogs me-2"></i>Admin Panel
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

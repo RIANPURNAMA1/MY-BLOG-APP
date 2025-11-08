@@ -28,7 +28,7 @@ body{
 }
 
 .nav-link{
-    font-size: large !important;
+    font-size: 18px !important;
 }
 
 :root{

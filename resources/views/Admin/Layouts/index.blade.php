@@ -16,6 +16,7 @@
     font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
+   
     
 }
 
@@ -24,7 +25,8 @@ body{
 }
 
 .nav-link{
-    font-size: large !important;
+    font-size: 17px !important;
+
 }
 
 :root{
@@ -33,7 +35,7 @@ body{
     --text-grey: #8390A2;
 }
 .navbar-brand{
-    font-size: x-large !important;
+    font-size: 13px !important;
 }
 .active{
     color: var(--main-color)!important;
@@ -41,11 +43,13 @@ body{
 .nav-link{
     margin-left: 40px !important;
     font-weight: bold !important;
+    font-size: 13px !important;
+
 }
 .btn-login{
     border: 3px solid var(--main-color);
     font-weight: bold !important;
-    font-size: large !important;
+    font-size: 14px !important;
     color: #1D2231 !important;
     padding: 10px 30px 10px 30px !important;
     background-color:  white !important;
@@ -74,6 +78,9 @@ width: fit-content !important;
 color: white !important;
 }
 
+body{
+  font-size: 15px !important;
+}
 
 .card-img-container {
     position: relative;
@@ -116,6 +123,7 @@ html {
 
 .navbar-admin{
     background-color: var(--main-color) !important;
+       font-size: 15px !important;
 }
 
 .detail-mobile{
