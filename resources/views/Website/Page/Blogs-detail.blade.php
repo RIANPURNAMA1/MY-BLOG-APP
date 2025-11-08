@@ -23,7 +23,7 @@
         <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="{{ asset('images/' . $data->image) }}" class="img-fluid rounded-start" alt="{{ $data->title }}">
+                    <img src="{{ asset('gambar/' . $data->image) }}" class="img-fluid rounded-start" alt="{{ $data->title }}">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">

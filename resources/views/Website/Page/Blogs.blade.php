@@ -142,7 +142,7 @@
                             <div class="card-img-container">
                                 <div class="d-flex justify-content-center">
 
-                                    <img src="{{ asset('images/' . $posts->image) }}" class="card-img-top" style="width: 200px ;" alt="Sample Post 1">
+                                    <img src="{{ asset('gambar/' . $posts->image) }}" class="card-img-top" style="width: 200px ;" alt="Sample Post 1">
                                 </div>
                                 @if (Auth()->check())
                                     <a href="{{ route('detail', $posts->id) }}" class="eye-icon">
