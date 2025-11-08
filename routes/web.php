@@ -35,14 +35,16 @@ Route::get('/login', function(){
 Route::get('/data/user', [AuthController::class, 'dataUser'])->name('admin.user');
 Route::post('/delete/user/{id}', [AuthController::class, 'deleteUser'])->name('delete.user');
 
-// route admin dashbord 
-Route::get('/admin', [AdminController::class, 'index'])->name('admin.index')->middleware('auth');
-Route::post('/admin/store', [AdminController::class, 'store'])->name('admin.store');
-Route::get('/admin/edit/{id}', [AdminController::class, 'edit'])->name('admin.edit');
-Route::post('/admin/update/{id}', [AdminController::class, 'update'])->name('admin.update');
-Route::get('/admin/show/{id}', [AdminController::class, 'show'])->name('admin.show');
-Route::delete('/admin/delete/{id}', [AdminController::class, 'destroy'])->name('admin.destroy');
-Route::get('/admin/pesan', [AdminController::class, 'showPesan'])->name('admin.pesan');
+// route admin dashboard (hanya admin yang bisa akses)
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::post('/admin/store', [AdminController::class, 'store'])->name('admin.store');
+    Route::get('/admin/edit/{id}', [AdminController::class, 'edit'])->name('admin.edit');
+    Route::post('/admin/update/{id}', [AdminController::class, 'update'])->name('admin.update');
+    Route::get('/admin/show/{id}', [AdminController::class, 'show'])->name('admin.show');
+    Route::delete('/admin/delete/{id}', [AdminController::class, 'destroy'])->name('admin.destroy');
+    Route::get('/admin/pesan', [AdminController::class, 'showPesan'])->name('admin.pesan');
+});
 
 
 

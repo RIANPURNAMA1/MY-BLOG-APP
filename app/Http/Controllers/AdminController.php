@@ -32,16 +32,20 @@ class AdminController extends Controller
         "tanggal" => "required|date"
     ]);
 
-    // Upload dan simpan gambar
+ // Ambil file image dari form
     $image = $request->file('image');
-    $new_name = time() . '.' . $image->getClientOriginalExtension();
-    $image->move(public_path('images'), $new_name);
+
+    // Buat nama unik berdasarkan timestamp
+    $newName = time() . '.' . $image->getClientOriginalExtension();
+
+    // Pindahkan file ke public/images
+    $image->move(public_path('gambar'), $newName);
 
     // Simpan data ke dalam database
     Blog::create([
         'title' => $request->title,
         'category' => $request->category,  // Menambahkan category
-        'image' => $new_name,
+        'image' => $newName,
         'description' => $request->description,
         'tanggal' => $request->tanggal,
         'user_id' => auth()->id(), // Tambahkan user_id dari pengguna yang sedang login

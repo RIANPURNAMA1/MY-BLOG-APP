@@ -62,7 +62,7 @@
         <tbody>
             @foreach($blogs as $blog)
             <tr>
-                <td><img src="{{ asset('images/' . $blog->image) }}" alt="{{ $blog->title }}" width="100" height="100" style="object-fit: cover; background-position: center"></td>
+                <td><img src="{{ asset('gambar/' . $blog->image) }}" alt="{{ $blog->title }}" width="100" height="100" style="object-fit: cover; background-position: center"></td>
                 <td>{{ $blog->title }}</td>
                 <td>{{ $blog->category}}</td>
                 <td>{{ $blog->tanggal }}</td>
